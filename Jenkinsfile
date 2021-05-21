@@ -7,5 +7,8 @@ pipeline {
                 echo 'Hello World'
             }
         }
+        stage('Composer Install') {
+                sh 'composer install'
+            }
     }
 }
