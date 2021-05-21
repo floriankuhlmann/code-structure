@@ -9,7 +9,12 @@ pipeline {
         }
         stage('Composer Install') {
             steps {
-                sh 'docker build .'
+                sh 'composer install'
+            }
+        }
+        stage('post') {
+            steps {
+             deleteDir()
             }
         }
     }
