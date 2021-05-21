@@ -8,7 +8,9 @@ pipeline {
             }
         }
         stage('Composer Install') {
+            steps {
                 sh 'composer install'
             }
+        }
     }
 }
