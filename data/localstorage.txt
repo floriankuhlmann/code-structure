@@ -1,0 +1,1 @@
+{"benchmarkValue":17300}
