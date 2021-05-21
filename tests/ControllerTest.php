@@ -52,7 +52,7 @@ final class ControllerTest extends TestCase
         $body = (string) $response->getBody();
 
         $this->assertEquals(200, $response->getStatusCode());
-        $this->assertEquals("\"wrong Content-Type\"",$body);
+        $this->assertEquals("wrong Content-Type",json_decode($body)[0]);
     }
 
 

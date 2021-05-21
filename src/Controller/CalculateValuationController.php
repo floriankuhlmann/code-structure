@@ -41,18 +41,18 @@ class CalculateValuationController
 
         $headers = $request->headers;
         if (!Validator::isHeaderTypeJson($headers)) {
-            echo $this->response->getJsonResponse("wrong Content-Type");
+            echo $this->response->getJsonResponse(["wrong Content-Type"]);
             return;
         }
 
         $bodyContent = $request->getContent();
         if (!Validator::hasBodyContent($bodyContent)) {
-            echo $this->response->getJsonResponse("no content in body");
+            echo $this->response->getJsonResponse(["no content in body"]);
             return;
         }
 
         if (!Validator::isContentJson($bodyContent)) {
-            echo $this->response->getJsonResponse("no json content");
+            echo $this->response->getJsonResponse(["no json content"]);
             return;
         }
 

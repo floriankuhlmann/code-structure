@@ -9,10 +9,10 @@ namespace CoSt\Helper;
 class Response
 {
     /**
-     * @param String $data
+     * @param Array $data
      * @return false|string
      */
-    public function getJsonResponse(String $data) {
+    public function getJsonResponse(array $data) {
 
         header('Content-Type: application/json');
         return json_encode($data);
