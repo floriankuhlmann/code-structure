@@ -1,20 +1,27 @@
 pipeline {
-    agent any
-
+    agent {
+        docker { image 'php:7.4-cli' }
+    }
+    environment {
+        // Specify your environment variables.
+        APP_VERSION = '1'
+    }
     stages {
         stage('Hello') {
-            steps {
+             steps {
                 echo 'Hello World'
-            }
+             }
         }
-        stage('Composer Install') {
+        stage('build') {
             steps {
-                sh 'composer install'
+                echo 'docker build'
+                sh 'docker build .'
             }
         }
         stage('post') {
             steps {
-             deleteDir()
+                echo 'delete dir'
+                deleteDir()
             }
         }
     }
