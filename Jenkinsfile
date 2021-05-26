@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker { image 'php:7.4-cli' }
-    }
+    agent { label 'docker' }
     environment {
         // Specify your environment variables.
         APP_VERSION = '1'
