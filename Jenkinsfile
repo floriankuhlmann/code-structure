@@ -5,6 +5,7 @@ pipeline {
     environment {
         // Specify your environment variables.
         APP_VERSION = '1'
+        PATH = '/usr/local/bin'
     }
     stages {
         stage('Hello') {
