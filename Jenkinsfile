@@ -1,5 +1,7 @@
 pipeline {
-    agent { label 'docker' }
+    agent {
+        docker { image 'php:7.4-cli' }
+    }
     environment {
         // Specify your environment variables.
         APP_VERSION = '1'
@@ -13,8 +15,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                echo 'docker build'
-                sh 'docker build .'
+                docker.build("codestructure","-f ./Dockerfile .")
             }
         }
         stage('post') {
