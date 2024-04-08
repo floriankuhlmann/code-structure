@@ -1,6 +1,6 @@
 # Calculate Valuation Controller
 
-Welcome to the Calculate Valuation Controller project, a minimalist PHP project designed as a coding challenge by Florian Kuhlmann. This project is ideal for DevOps professionals and developers looking to test and develop DevOps practices, Docker configurations, and build pipelines. With a simple controller performing calculations and accompanied by unit tests, it serves as a perfect sandbox for testing and learning.
+Welcome to the Calculate Valuation Controller project, a minimalist PHP project designed for fun and non profit by Florian Kuhlmann. This project is ideal for DevOps professionals and developers looking to test and develop DevOps practices, Docker configurations, and build pipelines. With a simple controller performing calculations and accompanied by unit tests, it serves as a perfect sandbox for testing and learning.
 
 ## Project Overview
 
